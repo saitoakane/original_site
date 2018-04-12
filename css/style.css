@@ -1,0 +1,187 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Abel");
+/* Google Fonts用のCSSを読み込み */
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: "Abel", "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  padding: 10px 10px; }
+
+.text-center {
+  text-align: center; }
+
+.block-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+header #portfolio {
+  background-color: #fef9ef;
+  margin-bottom: 20px;
+  text-align: center; }
+  header #portfolio h1 {
+    border-bottom: 2px solid #00bed7; }
+  header #portfolio h3 {
+    font-size: 14px;
+    padding-bottom: 5px;
+    margin-bottom: 0px; }
+  header #portfolio p {
+    text-align: left; }
+  header #portfolio .topimg {
+    padding: 20px; }
+    @media (min-width: 550px) {
+      header #portfolio .topimg {
+        height: 355px;
+        line-height: 30; } }
+  @media (min-width: 550px) {
+    header #portfolio .annnai {
+      padding-top: 20px;
+      padding-right: 20px; } }
+
+#main {
+  background-color: #fef9ef;
+  margin-bottom: 20px; }
+  @media (min-width: 550px) {
+    #main .skills_area {
+      margin: 30px; } }
+  #main .skills_title {
+    text-align: center;
+    padding: 15px 0; }
+  #main .skill_box {
+    display: flex;
+    flex-direction: row;
+    /*横並び指定・rowは省略可*/ }
+  #main .box {
+    padding: 10px;
+    flex: 1;
+    /* 2つのboxを分配する比率 1:1*/ }
+  #main li {
+    list-style: none;
+    color: #00bed7;
+    padding-left: 10px; }
+  @media (min-width: 550px) {
+    #main ul {
+      font-size: 38px;
+      padding-left: 14px; } }
+
+#wark {
+  background-color: #fef9ef;
+  margin-bottom: 20px; }
+  #wark .wark_title {
+    text-align: center; }
+  #wark .wark_area {
+    padding-top: 15px; }
+    @media (min-width: 550px) {
+      #wark .wark_area {
+        margin: 30px; } }
+  #wark .wark_area p {
+    color: #00bed7; }
+  #wark .wark_title {
+    text-align: center;
+    padding: 15px 0; }
+  #wark .site {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px; }
+    #wark .site h4 {
+      border: 2px solid #00bed7;
+      border-radius: 20%;
+      background-color: white;
+      position: absolute;
+      top: 0%;
+      left: -5%; }
+      @media (min-width: 550px) {
+        #wark .site h4 {
+          top: 33%;
+          left: 28%; }
+          #wark .site h4 a:hover {
+            display: none; } }
+    #wark .site a:hover {
+      opacity: 0.5; }
+
+.wark_box {
+  color: #00bed7;
+  text-align: center; }
+  .wark_box p {
+    text-align: left; }
+
+#carousel_area {
+  margin-bottom: 20px; }
+  #carousel_area .owl-dots {
+    text-align: left;
+    display: inline-block; }
+  #carousel_area .owl-dot span {
+    display: block;
+    border-radius: 0;
+    width: 25px;
+    height: 2px;
+    margin: 0 8px 0 0;
+    background-color: #a5e9fd; }
+  #carousel_area .active span {
+    background-color: red; }
+
+#item .box-wrapper {
+  display: flex;
+  flex-wrap: wrap; }
+#item .wark_box {
+  flex-direction: column; }
+  @media (min-width: 550px) {
+    #item .wark_box {
+      background-color: #ffffff;
+      padding: 5px;
+      margin: 1px;
+      width: calc(100% / 2 - 2px);
+      box-sizing: border-box; } }
+@media (max-width: 550px) {
+  #item .box {
+    width: calc(100% / 2 - 2px); } }
+
+#footer_area {
+  padding: 0 0 20px 0; }
+  #footer_area .icon {
+    background-color: #fef9ef;
+    padding: 10px 0; }
+  #footer_area .footer_title {
+    font-size: 17px;
+    text-align: center;
+    color: #00bed7; }
+    @media (min-width: 550px) {
+      #footer_area .footer_title {
+        font-size: 22px; } }
+  #footer_area .contact {
+    text-align: center; }
+  #footer_area .fa {
+    padding: 0 10px;
+    font-size: 30px; }
+  #footer_area a {
+    text-decoration: none;
+    cursor: pointer; }
+    #footer_area a:hover {
+      color: #71eeff; }
+
+#pageTop .img {
+  float: left; }
+#pageTop .img1 {
+  float: right; }
+#pageTop a.btn {
+  text-align: center;
+  float: left;
+  text-decoration: none;
+  padding-top: 14px;
+  padding-left: 16px;
+  font-size: 15px;
+  background-color: #71eeff;
+  border-radius: 71%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  /* line-height: 60px; */ }
+  #pageTop a.btn p {
+    position: relative;
+    top: 0;
+    right: 6px;
+    display: inline-block; }
+
+/*# sourceMappingURL=style.css.map */

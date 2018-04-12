@@ -1,0 +1,293 @@
+@charset "utf-8"; //日本語文字でエラーにならないようにする宣言
+//自動でrem数値へ変更してくれる関数
+@import url('https://fonts.googleapis.com/css?family=Abel');
+/* Google Fonts用のCSSを読み込み */
+
+//mixinを追加   @includeで呼び出せる！！
+//@mixin ファイル名;{}
+$ja_font: 'Abel',
+'游ゴシック',
+YuGothic,
+'メイリオ',
+Verdana,
+'Hiragino Kaku Gothic ProN',
+Meiryo,
+sans-serif;
+
+// colors
+$maincolor: #fef9ef;
+$sabcolor: #00bed7;
+$sab_title: #a5e9fd;
+
+body {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-family: $ja_font;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  padding: 10px 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.block-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+//header--------------------------------------
+header {
+  #portfolio {
+    background-color: $maincolor;
+    margin-bottom: 20px;
+    text-align: center;
+    h1 {
+      border-bottom: 2px solid #00bed7;
+    }
+    h3 {
+      font-size: 14px;
+      padding-bottom: 5px;
+      margin-bottom: 0px;
+    }
+    p {
+      text-align: left;
+    }
+    .topimg {
+      padding: 20px;
+      @media(min-width: 550px) {
+        height: 355px;
+        line-height: 30;
+      }
+    }
+    .annnai {
+      @media(min-width: 550px) {
+        padding-top:20px;
+        padding-right: 20px;
+      }
+    }
+  }
+}
+
+#main {
+  background-color: $maincolor;
+  margin-bottom: 20px;
+  .skills_area {
+    @media(min-width: 550px) {
+      margin:30px;
+    }
+  }
+  .skills_title {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .skill_box {
+    display: flex;
+    flex-direction: row;
+    /*横並び指定・rowは省略可*/
+  }
+  .box {
+
+    padding: 10px;
+    flex: 1;
+    /* 2つのboxを分配する比率 1:1*/
+  }
+
+  li {
+    list-style: none;
+    color: #00bed7;
+    padding-left: 10px;
+  }
+  @media(min-width:550px) {
+    ul {
+      font-size: 38px;
+      padding-left: 14px;
+    }
+
+  }
+
+
+}
+
+
+#wark {
+  background-color: $maincolor;
+  margin-bottom: 20px;
+  .wark_title {
+    text-align: center;
+  }
+  .wark_area {
+
+    padding-top: 15px;
+    @media(min-width: 550px) {
+      margin: 30px;
+    }
+  }
+  .wark_area p {
+    color: #00bed7;
+  }
+  .wark_title {
+    text-align: center;
+    padding: 15px 0;
+  }
+
+  .site {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+
+    h4 {
+      border: 2px solid #00bed7;
+      border-radius: 20%;
+      background-color: white;
+      position: absolute;
+      top: 0%;
+      left: -5%;
+      @media(min-width: 550px) {
+        top: 33%;
+        left: 28%;
+        a {
+          &:hover {
+            display: none;
+          }
+        }
+      }
+    }
+    a {
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+  }
+}
+
+
+
+
+.wark_box {
+  color: #00bed7;
+  text-align: center;
+  
+  p {
+    text-align: left;
+  }
+}
+
+
+
+#carousel_area {
+  margin-bottom: 20px;
+  .owl-dots {
+    text-align: left;
+    display: inline-block;
+  }
+  .owl-dot span {
+    display: block;
+    border-radius: 0;
+    width: 25px;
+    height: 2px;
+    margin: 0 8px 0 0;
+    background-color: $sab_title;
+  }
+  .active span {
+    background-color: red;
+  }
+}
+
+
+#item {
+  .box-wrapper {
+    //親要素に入れる
+    display: flex;
+    flex-wrap: wrap; // width: 100%; 
+    //text-align: center; 
+  }
+  .wark_box {
+    //box-wrapの子要素
+    flex-direction: column;
+    @media(min-width: 550px) {
+      background-color: #ffffff;
+      padding: 5px;
+      margin: 1px; // width: 30%; 
+      width: calc(100% / 2 - 2px);
+      box-sizing: border-box; //ここ忘れない！！
+    }
+  }
+  @media(max-width:550px) {
+    .box {
+      width: calc(100% / 2 - 2px);
+    }
+  }
+}
+
+#footer_area {
+
+  padding: 0 0 20px 0;
+  .icon {
+    background-color: $maincolor;
+    padding: 10px 0;
+  }
+  .footer_title {
+    font-size: 17px;
+    text-align: center;
+    color: #00bed7;
+    @media(min-width: 550px) {
+      font-size:22px;
+    }
+  }
+  .contact {
+    text-align: center;
+  }
+  .fa {
+    padding: 0 10px;
+    font-size: 30px;
+
+
+  }
+  a {
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+      color: lighten(#00bed7, 30%);
+    }
+  }
+}
+
+#pageTop {
+  .img {
+    float: left;
+  }
+  .img1 {
+    float: right;
+  }
+  a.btn {
+    text-align: center;
+    float: left;
+    text-decoration: none;
+    padding-top: 14px;
+    padding-left: 16px;
+    font-size: 15px;
+    background-color: #71eeff;
+    border-radius: 71%;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    p {
+      position: relative;
+      top: 0;
+      right: 6px;
+      display: inline-block;
+    }
+
+    /* line-height: 60px; */
+    // float: left;
+    // text-decoration: none;
+    // padding-top: 14px;
+    // padding-left: 16px;
+    // font-size: 15px;
+  }
+}
