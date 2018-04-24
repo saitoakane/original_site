@@ -1,0 +1,59 @@
+@import url(https://fonts.googleapis.com/css?family=Abel);
+a:hover {
+  text-decoration: underline; }
+
+* {
+  text-align: center;
+  box-sizing: border-box; }
+
+.box-wrap {
+  display: flex;
+  flex-direction: row; }
+
+.box {
+  border: solid 1px skyblue;
+  margin: 10px;
+  flex: 1;
+  width: 33.3%; }
+
+@media (max-width: 768px) {
+  .box-wrap {
+    flex-direction: column;
+    width: 100%; } }
+h1 {
+  font-size: 50px;
+  padding: 30px; }
+
+.box p {
+  padding: 15px;
+  border: 1px solid red; }
+
+.top-img {
+  background-image: url("../imges/kadai_img.png");
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center; }
+
+@media (max-width: 768px) {
+  .top-img {
+    height: 250px; }
+
+  .box-wrap {
+    width: 100%; } }
+.p {
+  font-size: 20px;
+  padding: 15px; }
+
+.content a {
+  display: inline-block;
+  padding: 10px;
+  background-color: blue;
+  border-radius: 4px;
+  padding: 5px 20px;
+  color: white; }
+
+.content a:hover {
+  opacity: 0.5; }
+
+/*# sourceMappingURL=style:css.map */

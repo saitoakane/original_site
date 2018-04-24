@@ -1,0 +1,137 @@
+//Compassは一番上に書く
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック",
+YuGothic,
+"メイリオ",
+Verdana,
+"Hiragino Kaku Gothic ProN",
+Meiryo,
+sans-serif;
+
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+
+
+
+
+* {
+  //全体に反映される
+  text-align: center;
+  box-sizing: border-box; //レイアウト崩れを未然に防ぐことができる
+}
+
+//top-img----------------------
+.top-img {
+  background-image: url("../images/kadai_img.png"); //ここあとで聞く！！
+  height: 500px;
+  width: 100%;
+  background-size: cover;
+  background-position: center center;
+}
+
+@media(max-width:768px) {
+  .top-img {
+    height: 250px;
+    width: auto;
+  }
+}
+.flexible-images {
+    max-width: 100%;
+    height: auto;
+}
+
+
+//container---------------------
+.container {
+  margin: 0px 30px;
+}
+
+//main--------------------------
+h1 {
+  color: red;
+  font-size: 50px;
+  padding: 30px;
+}
+
+//box-wrapper----------------------
+//※flexで横並びにする方法
+.box-wrap {
+  //親要素に入れる
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+
+}
+
+.box {
+  //box-wrapの子要素
+  border: solid 1px red;
+  margin: 10px;
+  flex: 1;
+}
+
+//モバイルの時に変える
+@media (max-width: 768px) {
+  .box-wrap {
+    flex-direction: column;
+    width: 100%;
+  }
+  .box {
+    width: auto;
+  }
+}
+
+//ここまでok---------------------------
+.top {
+  font-size: 30px;
+  font-weight: bold;
+  padding: 15px;
+  border: 2px solid red;
+  background-color: pink;
+}
+
+.coment {
+  display: inline-block;
+  padding: 30px;
+  font-size: 30px;
+}
+
+//content----------------------------------
+.content {
+  padding-top: 30px;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 35px;
+  padding: 30px;
+}
+
+.content a {
+  display: inline-block;
+  background-color: pink;
+  border-radius: 4px;
+  padding: 20px 40px;
+  font-size: 30px;
+  color: red;
+}
+
+@media (max-width: 768px) {
+  .content a {
+    width: 100%;
+  }
+}
+
+//flexible-images {sz
+//max-width: 100%;//横幅の伸縮に合わせて画像を伸縮させる技術
+//height: auto;
+//background-size: cover;//縦横比を保持
+//background-position: center center;//背景画像が中央に位置するように指定可能
+//}

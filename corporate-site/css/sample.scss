@@ -7,7 +7,7 @@ html {
 //mixinを追加   @incluideで呼び出せる！！
 @mixin fontsize($size: 24, $base: 10) {
   font-size: $size + px;
-  font-size: ($size / $base) * 1rem;
+  font-size: ($size / $base) * 1rem; //自動でrem数値へ変更してくれる関数
 }
 
 $ja_font: "ヒラギノ角ゴ Pro W3",
@@ -432,21 +432,18 @@ h1 {
       margin: 0;
       letter-spacing: 0.2rem;
     }
-  }//h2
-
+  } //h2
   @media (min-width: 550px) {
     padding: 80px 0;
   }
 } //sub_cover 
-
-
 #contents {
   padding-top: 20px;
 
   #main {
     th {
-      padding-right:20px;
-      
+      padding-right: 20px;
+
       font-size: 1.4rem;
       color: #626262;
     }
@@ -468,8 +465,7 @@ h1 {
         font-size: 2rem;
         padding-bottom: 20px;
       }
-    }//h2
-
+    } //h2
     .news_li {
       font-size: 15px;
       font-size: 1.5rem;
@@ -489,11 +485,8 @@ h1 {
         } //span
       } //li
     } //news_li
-    
   } //main
-  
-  
-   #sidebar {
+  #sidebar {
     padding-bottom: 20px;
 
     .pc_sidemenu {
@@ -529,4 +522,3 @@ h1 {
     } //pc_sidemene
   } //sidebar
 } //contents
-

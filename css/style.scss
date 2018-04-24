@@ -52,6 +52,12 @@ header {
       padding-bottom: 5px;
       margin-bottom: 0px;
     }
+    .massege {
+      padding: 0 50px;
+      @media(min-width: 550px) {
+        padding:0 10px;
+      }
+    }
     p {
       text-align: left;
     }
@@ -59,7 +65,7 @@ header {
       padding: 20px;
       @media(min-width: 550px) {
         height: 355px;
-        line-height: 30;
+        line-height: 36;
       }
     }
     .annnai {
@@ -71,6 +77,8 @@ header {
   }
 }
 
+
+//main--------------------------------------
 #main {
   background-color: $maincolor;
   margin-bottom: 20px;
@@ -83,36 +91,47 @@ header {
     text-align: center;
     padding: 15px 0;
   }
-
   .skill_box {
-    display: flex;
-    flex-direction: row;
-    /*横並び指定・rowは省略可*/
-  }
-  .box {
-
-    padding: 10px;
-    flex: 1;
-    /* 2つのboxを分配する比率 1:1*/
-  }
-
-  li {
-    list-style: none;
-    color: #00bed7;
-    padding-left: 10px;
-  }
-  @media(min-width:550px) {
-    ul {
-      font-size: 38px;
-      padding-left: 14px;
+    // display: flex;
+    // flex-direction: row;
+    // 横並び指定・rowは省略可
+    // padding: 10px; // flex: 1;
+    background-image: url(../images/skill/skillcat.png);
+    background-size: contain;
+    background-repeat: no-repeat; //background-attachment: fixed;
+    background-position-x: right;
+    .box {
+      font-size: 30px;
+      color: #00bed7;
+    }
+    .catskill {
+      opacity: 5;
     }
 
+    /* 2つのboxを分配する比率 1:1*/
+    p {
+      font-size: 1rem;
+    }
   }
+}
 
+// li {
+//   list-style: none;
+//   color: #00bed7;
+//   padding-left: 10px;
+// }
+@media(min-width:550px) {
+  ul {
+    font-size: 38px;
+    padding-left: 14px;
+  }
 
 }
 
 
+
+
+//wark--------------------------------------
 #wark {
   background-color: $maincolor;
   margin-bottom: 20px;
@@ -126,9 +145,9 @@ header {
       margin: 30px;
     }
   }
-  .wark_area p {
-    color: #00bed7;
-  }
+  // .wark_area p {
+  //   color: #00bed7;
+  // }
   .wark_title {
     text-align: center;
     padding: 15px 0;
@@ -164,18 +183,15 @@ header {
   }
 }
 
-
-
-
 .wark_box {
-  color: #00bed7;
+  // color: #00bed7;
   text-align: center;
-  
+
   p {
+    font-size:1rem;
     text-align: left;
   }
 }
-
 
 
 #carousel_area {
@@ -207,9 +223,12 @@ header {
   }
   .wark_box {
     //box-wrapの子要素
+    background-color: #ffffff;
     flex-direction: column;
+    margin-bottom: 10px;
+
     @media(min-width: 550px) {
-      background-color: #ffffff;
+
       padding: 5px;
       margin: 1px; // width: 30%; 
       width: calc(100% / 2 - 2px);
@@ -223,6 +242,8 @@ header {
   }
 }
 
+
+//footer--------------------------------------
 #footer_area {
 
   padding: 0 0 20px 0;
@@ -240,54 +261,77 @@ header {
   }
   .contact {
     text-align: center;
-  }
-  .fa {
-    padding: 0 10px;
-    font-size: 30px;
 
+    .fa {
+      padding: 0 10px;
+      font-size: 30px;
+    }
+    a {
+      text-decoration: none;
+      cursor: pointer;
 
-  }
-  a {
-    text-decoration: none;
-    cursor: pointer;
-
-    &:hover {
-      color: lighten(#00bed7, 30%);
+      &:hover {
+        color: lighten(#00bed7, 30%);
+      }
     }
   }
-}
-
-#pageTop {
-  .img {
-    float: left;
-  }
-  .img1 {
-    float: right;
-  }
-  a.btn {
+  .toppage a {
+    
+    background: #71eeff;
+    padding: 10px;
+    border-radius: 50%;
+    position: relative;
+    bottom: 0;
+    left: 276px;
+    color: white;
+    text-decoration: none;
+    display: inline-block;
     text-align: center;
-    float: left;
-    text-decoration: none;
-    padding-top: 14px;
-    padding-left: 16px;
-    font-size: 15px;
-    background-color: #71eeff;
-    border-radius: 71%;
-    width: 60px;
-    height: 60px;
-    position: absolute;
-    p {
-      position: relative;
-      top: 0;
-      right: 6px;
-      display: inline-block;
+    font-size: 1rem;
+    
+    @media(min-width: 550px) {
+    float: right;
+    padding: 10px;
+    border-radius: 70%;
+    position: relative;
+    bottom: 36px;
+    left: 38px;
     }
-
-    /* line-height: 60px; */
-    // float: left;
-    // text-decoration: none;
-    // padding-top: 14px;
-    // padding-left: 16px;
-    // font-size: 15px;
   }
 }
+
+
+#omake {
+  p {
+    text-align:center;
+  }
+  // .img {
+  //   background-image:url("../images/footer/catdog2.png");
+  //   float: left;
+  // }
+  // .img1 {
+  //   float: right;
+  } // a.btn {
+  //   text-align: center;
+  //   float: left;
+  //   text-decoration: none;
+  //   padding-top: 14px;
+  //   padding-left: 16px;
+  //   font-size: 15px;
+  //   background-color: #71eeff;
+  //   float: right;
+  //   display: inline;
+  //   padding: 9px;
+  //   border-radius: 70%;
+  //   text-align: right;
+  //   position: relative;
+  //   left: 63px;
+
+
+/* line-height: 60px; */
+
+// float: left;
+// text-decoration: none;
+// padding-top: 14px;
+// padding-left: 16px;
+// font-size: 15px;

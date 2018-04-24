@@ -27,11 +27,6 @@ header #portfolio {
     font-size: 14px;
     padding-bottom: 5px;
     margin-bottom: 0px; }
-  header #portfolio .massege {
-    padding: 0 50px; }
-    @media (min-width: 550px) {
-      header #portfolio .massege {
-        padding: 0 10px; } }
   header #portfolio p {
     text-align: left; }
   header #portfolio .topimg {
@@ -55,23 +50,24 @@ header #portfolio {
     text-align: center;
     padding: 15px 0; }
   #main .skill_box {
-    background-image: url(../images/skill/skillcat.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position-x: right;
-    /* 2つのboxを分配する比率 1:1*/ }
+    display: flex;
+    flex-direction: row;
+    /*横並び指定・rowは省略可*/ }
     #main .skill_box .box {
-      font-size: 30px;
-      color: #00bed7; }
-    #main .skill_box .catskill {
-      opacity: 5; }
-    #main .skill_box p {
-      font-size: 1rem; }
+      padding: 10px;
+      flex: 1;
+      /* 2つのboxを分配する比率 1:1*/ }
+      #main .skill_box .box p {
+        font-size: 1rem; }
+  #main li {
+    list-style: none;
+    color: #00bed7;
+    padding-left: 10px; }
+  @media (min-width: 550px) {
+    #main ul {
+      font-size: 38px;
+      padding-left: 14px; } }
 
-@media (min-width: 550px) {
-  ul {
-    font-size: 38px;
-    padding-left: 14px; } }
 #wark {
   background-color: #fef9ef;
   margin-bottom: 20px; }
@@ -82,6 +78,8 @@ header #portfolio {
     @media (min-width: 550px) {
       #wark .wark_area {
         margin: 30px; } }
+  #wark .wark_area p {
+    color: #00bed7; }
   #wark .wark_title {
     text-align: center;
     padding: 15px 0; }
@@ -106,9 +104,9 @@ header #portfolio {
       opacity: 0.5; }
 
 .wark_box {
+  color: #00bed7;
   text-align: center; }
   .wark_box p {
-    font-size: 1rem;
     text-align: left; }
 
 #carousel_area {
@@ -130,11 +128,10 @@ header #portfolio {
   display: flex;
   flex-wrap: wrap; }
 #item .wark_box {
-  background-color: #ffffff;
-  flex-direction: column;
-  margin-bottom: 10px; }
+  flex-direction: column; }
   @media (min-width: 550px) {
     #item .wark_box {
+      background-color: #ffffff;
       padding: 5px;
       margin: 1px;
       width: calc(100% / 2 - 2px);
@@ -157,38 +154,36 @@ header #portfolio {
         font-size: 22px; } }
   #footer_area .contact {
     text-align: center; }
-    #footer_area .contact .fa {
-      padding: 0 10px;
-      font-size: 30px; }
-    #footer_area .contact a {
-      text-decoration: none;
-      cursor: pointer; }
-      #footer_area .contact a:hover {
-        color: #71eeff; }
-  #footer_area .toppage a {
-    background: #71eeff;
-    padding: 10px;
-    border-radius: 50%;
-    position: relative;
-    bottom: 0;
-    left: 276px;
-    color: white;
+  #footer_area .fa {
+    padding: 0 10px;
+    font-size: 30px; }
+  #footer_area a {
     text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    font-size: 1rem; }
-    @media (min-width: 550px) {
-      #footer_area .toppage a {
-        float: right;
-        padding: 10px;
-        border-radius: 70%;
-        position: relative;
-        bottom: 36px;
-        left: 38px; } }
+    cursor: pointer; }
+    #footer_area a:hover {
+      color: #71eeff; }
 
-#omake p {
-  text-align: center; }
+#pageTop .img {
+  float: left; }
+#pageTop .img1 {
+  float: right; }
+#pageTop a.btn {
+  text-align: center;
+  float: left;
+  text-decoration: none;
+  padding-top: 14px;
+  padding-left: 16px;
+  font-size: 15px;
+  background-color: #71eeff;
+  border-radius: 71%;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  /* line-height: 60px; */ }
+  #pageTop a.btn p {
+    position: relative;
+    top: 0;
+    right: 6px;
+    display: inline-block; }
 
-/* line-height: 60px; */
-
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=stye.css.map */
